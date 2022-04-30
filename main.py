@@ -34,7 +34,14 @@ while validInput == False: # While the input is invalid.
     try: # Enter a try statement, as we cannot guarantee that the following block of code will not produce an error.
 
         numOfCharacters = int(input("Enter number of characters for password: ")) # Set numOfCharacters to the result of the users input.
-        validInput = True # Set valid input to true.
+
+        if numOfCharacters < 0: # If the number of characters is less than 0.
+
+            print("That's an invalid number, please try again.") # Tell the user that the input they gave is not valid and ask them to try again.
+            
+        else: # In any other case.
+
+            validInput = True # Set valid input to true.
 
     except: # If an error occurs, execute the following block of code.
 
